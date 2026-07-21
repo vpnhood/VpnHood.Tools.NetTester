@@ -3,9 +3,9 @@ using System.Net.Sockets;
 using Microsoft.Extensions.Logging;
 using VpnHood.Core.Toolkit.Logging;
 using VpnHood.Core.Toolkit.Utils;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester.Testers.TcpTesters;
+namespace VpnHood.Tools.NetTester.Testers.TcpTesters;
 
 public class TcpTesterClient(IPEndPoint serverEp) : IStreamTesterClient
 {
@@ -26,7 +26,7 @@ public class TcpTesterClient(IPEndPoint serverEp) : IStreamTesterClient
             await Task.WhenAll(uploadTasks);
         }
 
-        // start multi downloaders
+        // start multi downloads
         VhLogger.Instance.LogInformation("\n--------");
         VhLogger.Instance.LogInformation(
             $"Tcp => Start Downloading {VhUtils.FormatBytes(downSize)}, Connections: {connectionCount}");

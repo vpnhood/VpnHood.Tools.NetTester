@@ -4,11 +4,11 @@ using Microsoft.Extensions.Logging;
 using VpnHood.Core.Server.Access;
 using VpnHood.Core.Toolkit.Logging;
 using VpnHood.Core.Toolkit.Utils;
-using VpnHood.NetTester.Testers.HttpTesters;
-using VpnHood.NetTester.Testers.QuicTesters;
-using VpnHood.NetTester.Testers.TcpTesters;
+using VpnHood.Tools.NetTester.Testers.HttpTesters;
+using VpnHood.Tools.NetTester.Testers.QuicTesters;
+using VpnHood.Tools.NetTester.Testers.TcpTesters;
 
-namespace VpnHood.NetTester.Servers;
+namespace VpnHood.Tools.NetTester.Servers;
 
 internal class ServerHost(IPAddress listenerIp) : IDisposable
 {

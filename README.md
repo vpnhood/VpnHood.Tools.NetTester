@@ -17,13 +17,24 @@ A network performance testing tool that supports multiple protocols including TC
 
 ## Installation
 
-Build the project using the .NET CLI:
+Install as a .NET tool — no build required:
 
 ```bash
-dotnet build
+# Global install
+dotnet tool install --global VpnHood.Tools.NetTester
+
+# ...or pin it per repository (recommended for teams and CI)
+dotnet new tool-manifest
+dotnet tool install VpnHood.Tools.NetTester
 ```
 
-The compiled executable will be named `nettester`.
+The command is `nettester` (or `dotnet nettester` for a local install).
+
+To build from source instead:
+
+```bash
+dotnet build VpnHood.Tools.NetTester.slnx
+```
 
 ## Usage
 
@@ -146,12 +157,13 @@ LGPL-2.1-only
 
 ## Copyright
 
-� OmegaHood LLC. All rights reserved.
+© OmegaHood LLC. All rights reserved.
 
 ## Project Links
 
 - [VpnHood Project](https://github.com/vpnhood/vpnhood)
-- [NetTester Repository](https://github.com/vpnhood/VpnHood.NetTester)
+- [NetTester Repository](https://github.com/vpnhood/VpnHood.Tools.NetTester)
+- [NuGet Package](https://www.nuget.org/packages/VpnHood.Tools.NetTester)
 
 ## Contributing
 

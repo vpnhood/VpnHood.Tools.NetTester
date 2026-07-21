@@ -1,0 +1,21 @@
+<Project>
+
+	<PropertyGroup>
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+		<CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+	</PropertyGroup>
+
+	<!-- Runtime dependencies -->
+	<ItemGroup>
+		<PackageVersion Include="EmbedIO" Version="3.5.2" />
+		<PackageVersion Include="Microsoft.Native.Quic.MsQuic.OpenSSL" Version="2.5.8" />
+		<PackageVersion Include="VpnHood.Core.Server.Access" Version="8.0.818" />
+		<PackageVersion Include="VpnHood.Core.Toolkit" Version="8.0.818" />
+	</ItemGroup>
+
+	<!-- Build-time only -->
+	<ItemGroup>
+		<PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
+	</ItemGroup>
+
+</Project>

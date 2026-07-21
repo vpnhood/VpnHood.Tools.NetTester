@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace VpnHood.NetTester.Utils;
+namespace VpnHood.Tools.NetTester.Utils;
 
 public class SimpleLogger(string? file = null) : ILogger
 {

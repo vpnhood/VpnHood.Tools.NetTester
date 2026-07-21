@@ -3,7 +3,7 @@ using System.Net.Security;
 using System.Net.Sockets;
 using System.Security.Cryptography.X509Certificates;
 
-namespace VpnHood.NetTester.Testers.HttpTesters;
+namespace VpnHood.Tools.NetTester.Testers.HttpTesters;
 
 public static class HttpClientUtil
 {

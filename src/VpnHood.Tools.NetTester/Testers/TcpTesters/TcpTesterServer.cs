@@ -2,10 +2,9 @@
 using System.Net.Sockets;
 using Microsoft.Extensions.Logging;
 using VpnHood.Core.Toolkit.Logging;
-using VpnHood.Core.Toolkit.Net;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester.Testers.TcpTesters;
+namespace VpnHood.Tools.NetTester.Testers.TcpTesters;
 
 public class TcpTesterServer : IDisposable
 {

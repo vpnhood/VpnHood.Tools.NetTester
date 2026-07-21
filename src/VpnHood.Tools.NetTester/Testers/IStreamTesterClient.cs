@@ -1,4 +1,4 @@
-﻿namespace VpnHood.NetTester.Testers;
+﻿namespace VpnHood.Tools.NetTester.Testers;
 
 public interface IStreamTesterClient
 {

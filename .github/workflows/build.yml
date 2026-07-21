@@ -1,0 +1,34 @@
+name: Build
+
+# Continuous integration for main and pull requests: answers "is main healthy?".
+# Releasing is a separate, dispatch-triggered concern — see publish_nugets.yml.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore VpnHood.Tools.NetTester.slnx
+
+      - name: Build
+        run: dotnet build VpnHood.Tools.NetTester.slnx --configuration Release --no-restore
+
+      # Smoke test only: proves the package still builds (license expression, README, tool
+      # manifest) before anyone dispatches a release. The output is intentionally not uploaded —
+      # the only package that matters is the one publish_nugets.yml pushes.
+      - name: Pack
+        run: dotnet pack src/VpnHood.Tools.NetTester/VpnHood.Tools.NetTester.csproj --configuration Release --no-build --output ./artifacts

@@ -2,7 +2,7 @@
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
 
-namespace VpnHood.NetTester;
+namespace VpnHood.Tools.NetTester;
 
 // ReSharper disable once UnusedMember.Global
 public class UdpEchoClient2

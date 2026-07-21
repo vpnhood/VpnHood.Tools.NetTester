@@ -3,9 +3,9 @@ using System.Net.Http.Headers;
 using Microsoft.Extensions.Logging;
 using VpnHood.Core.Toolkit.Logging;
 using VpnHood.Core.Toolkit.Utils;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester.Testers.HttpTesters;
+namespace VpnHood.Tools.NetTester.Testers.HttpTesters;
 
 public class HttpTesterClient(IPEndPoint serverEp, string? domain, bool isHttps, TimeSpan? timeout = null)
     : IStreamTesterClient

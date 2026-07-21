@@ -1,0 +1,57 @@
+<Project>
+
+	<!--
+	  The single version every project inherits, stamped by the monorepo's shared publish script
+	  (pub/lib/Publish-ModuleNugetPackages.ps1) from pub/PubVersion.json.
+
+	  Keep the element below FIRST in this file, in its own leading PropertyGroup: the stamper
+	  regex-replaces only the first match, so anything version-shaped above it gets rewritten
+	  instead. For the same reason, never write a literal version element inside a comment.
+	  Never add one to an individual csproj either — it overrides this and ships a stale number.
+	-->
+	<PropertyGroup>
+		<Version>1.0.5</Version>
+	</PropertyGroup>
+
+	<!-- Language / compiler settings shared by every project in the repo. -->
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<AnalysisLevel>latest</AnalysisLevel>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<FileVersion>$([System.DateTime]::Now.ToString("yyyy.M.d.HHmm"))</FileVersion>
+	</PropertyGroup>
+
+	<!-- Package metadata shared by anything that ships to NuGet. -->
+	<PropertyGroup>
+		<Authors>OmegaHood LLC</Authors>
+		<Company>OmegaHood LLC</Company>
+		<Copyright>© OmegaHood LLC. All rights reserved.</Copyright>
+		<PackageProjectUrl>https://github.com/vpnhood/VpnHood.Tools.NetTester</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/vpnhood/VpnHood.Tools.NetTester</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>LGPL-2.1-only</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>network;performance;benchmark;tcp;http;quic;speedtest;dotnet-tool</PackageTags>
+	</PropertyGroup>
+
+	<!-- Reproducible builds: embed source metadata so symbols resolve from the repo. -->
+	<PropertyGroup>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<Deterministic>true</Deterministic>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+
+</Project>

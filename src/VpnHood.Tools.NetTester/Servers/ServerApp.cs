@@ -3,7 +3,7 @@ using EmbedIO;
 using EmbedIO.Routing;
 using EmbedIO.WebApi;
 
-namespace VpnHood.NetTester.Servers;
+namespace VpnHood.Tools.NetTester.Servers;
 
 internal class ServerApp : IDisposable
 {

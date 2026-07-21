@@ -1,3 +1,15 @@
 <Solution>
-  <Project Path="VpnHood.NetTester/VpnHood.NetTester.csproj" />
+  <Folder Name="/Solution Items/">
+    <File Path="CLAUDE.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Solution Items/workflows/">
+    <File Path=".github/workflows/build.yml" />
+    <File Path=".github/workflows/publish_nugets.yml" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/VpnHood.Tools.NetTester/VpnHood.Tools.NetTester.csproj" />
+  </Folder>
 </Solution>

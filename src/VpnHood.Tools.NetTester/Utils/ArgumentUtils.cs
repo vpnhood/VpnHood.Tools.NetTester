@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace VpnHood.NetTester.Utils;
+namespace VpnHood.Tools.NetTester.Utils;
 
 internal static class ArgumentUtils
 {

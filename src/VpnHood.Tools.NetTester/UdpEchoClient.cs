@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester;
+namespace VpnHood.Tools.NetTester;
 
 public class UdpEchoClient
 {

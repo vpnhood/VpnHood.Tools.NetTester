@@ -4,14 +4,14 @@ using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using VpnHood.Core.Toolkit.Jobs;
 using VpnHood.Core.Toolkit.Logging;
-using VpnHood.NetTester.Servers;
-using VpnHood.NetTester.Testers;
-using VpnHood.NetTester.Testers.HttpTesters;
-using VpnHood.NetTester.Testers.QuicTesters;
-using VpnHood.NetTester.Testers.TcpTesters;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Servers;
+using VpnHood.Tools.NetTester.Testers;
+using VpnHood.Tools.NetTester.Testers.HttpTesters;
+using VpnHood.Tools.NetTester.Testers.QuicTesters;
+using VpnHood.Tools.NetTester.Testers.TcpTesters;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester.Clients;
+namespace VpnHood.Tools.NetTester.Clients;
 
 internal class ClientApp : IDisposable
 {
@@ -111,7 +111,8 @@ internal class ClientApp : IDisposable
         };
 
         // sent serverConfig to server via HttpClient
-        var httpClient = new HttpClient();
+        // ReSharper disable once ShortLivedHttpClient
+        using var httpClient = new HttpClient();
         var content = new StringContent(JsonSerializer.Serialize(serverConfig), Encoding.UTF8, "application/json");
         var response = await httpClient.PostAsync($"http://{ServerEndPoint}/config", content);
         response.EnsureSuccessStatusCode();

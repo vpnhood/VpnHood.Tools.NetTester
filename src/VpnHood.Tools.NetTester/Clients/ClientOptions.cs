@@ -2,9 +2,9 @@
 using System.Text.Json.Serialization;
 using VpnHood.Core.Server.Access;
 using VpnHood.Core.Toolkit.Converters;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester.Clients;
+namespace VpnHood.Tools.NetTester.Clients;
 
 public class ClientOptions(string[] args)
 {

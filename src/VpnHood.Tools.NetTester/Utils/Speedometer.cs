@@ -4,7 +4,7 @@ using VpnHood.Core.Toolkit.Jobs;
 using VpnHood.Core.Toolkit.Logging;
 using VpnHood.Core.Toolkit.Utils;
 
-namespace VpnHood.NetTester.Utils;
+namespace VpnHood.Tools.NetTester.Utils;
 
 public class Speedometer : IDisposable
 {

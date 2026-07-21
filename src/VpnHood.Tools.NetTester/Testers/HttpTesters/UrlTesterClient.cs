@@ -2,9 +2,9 @@
 using Microsoft.Extensions.Logging;
 using VpnHood.Core.Toolkit.Logging;
 using VpnHood.Core.Toolkit.Utils;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester.Testers.HttpTesters;
+namespace VpnHood.Tools.NetTester.Testers.HttpTesters;
 
 public class UrlTesterClient(Uri url, IPAddress? serverIp, TimeSpan? timeout = null)
     : IStreamTesterClient

@@ -1,4 +1,4 @@
-﻿namespace VpnHood.NetTester.Servers;
+﻿namespace VpnHood.Tools.NetTester.Servers;
 
 internal class ServerConfig
 {

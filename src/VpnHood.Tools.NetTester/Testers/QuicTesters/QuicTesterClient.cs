@@ -6,9 +6,9 @@ using System.Security.Cryptography.X509Certificates;
 using Microsoft.Extensions.Logging;
 using VpnHood.Core.Toolkit.Logging;
 using VpnHood.Core.Toolkit.Utils;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester.Testers.QuicTesters;
+namespace VpnHood.Tools.NetTester.Testers.QuicTesters;
 
 public class QuicTesterClient(IPEndPoint serverEp, string domain, TimeSpan? timeout)
     : IStreamTesterClient
@@ -30,7 +30,7 @@ public class QuicTesterClient(IPEndPoint serverEp, string domain, TimeSpan? time
             await Task.WhenAll(uploadTasks);
         }
 
-        // start multi downloaders
+        // start multi downloads
         VhLogger.Instance.LogInformation("\n--------");
         VhLogger.Instance.LogInformation(
             $"QUIC => Start Downloading {VhUtils.FormatBytes(downSize)}, Connections: {connectionCount}");

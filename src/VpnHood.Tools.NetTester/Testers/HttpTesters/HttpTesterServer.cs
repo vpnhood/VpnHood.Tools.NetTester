@@ -4,9 +4,9 @@ using System.Text;
 using EmbedIO;
 using EmbedIO.Routing;
 using EmbedIO.WebApi;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester.Testers.HttpTesters;
+namespace VpnHood.Tools.NetTester.Testers.HttpTesters;
 
 internal class HttpTesterServer : IDisposable
 {

@@ -1,35 +1,31 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net10.0</TargetFramework>
 		<AssemblyName>nettester</AssemblyName>
+		<RootNamespace>VpnHood.Tools.NetTester</RootNamespace>
 	</PropertyGroup>
 
+	<!-- Ship as a .NET global/local tool: `dotnet tool install -g VpnHood.Tools.NetTester` -->
 	<PropertyGroup>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<IncludeSymbols>True</IncludeSymbols>
-		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
-		<LangVersion>latest</LangVersion>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<PackageLicenseExpression>LGPL-2.1-only</PackageLicenseExpression>
-		<Company>OmegaHood LLC</Company>
-		<Copyright>© OmegaHood LLC. All rights reserved.</Copyright>
-		<PackageProjectUrl>https://github.com/vpnhood/vpnhood</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/vpnhood/vpnhood</RepositoryUrl>
-		<FileVersion>$([System.DateTime]::Now.ToString("yyyy.M.d.HHmm"))</FileVersion>
-		<AssemblyName>nettester</AssemblyName>
-		<AssemblyVersion>1.0.5</AssemblyVersion>
+		<PackAsTool>true</PackAsTool>
+		<ToolCommandName>nettester</ToolCommandName>
+		<PackageId>VpnHood.Tools.NetTester</PackageId>
+		<Title>VpnHood NetTester</Title>
+		<Description>Network performance testing tool for TCP, HTTP, HTTPS and QUIC. Runs as a server, a client, or both, and measures upload and download throughput across protocols.</Description>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EmbedIO" Version="3.5.2" />
-		<PackageReference Include="Microsoft.Native.Quic.MsQuic.OpenSSL" Version="2.5.8" />
-		<PackageReference Include="VpnHood.Core.Server.Access" Version="8.0.818" />
-		<PackageReference Include="VpnHood.Core.Toolkit" Version="8.0.818" />
+		<PackageReference Include="EmbedIO" />
+		<PackageReference Include="Microsoft.Native.Quic.MsQuic.OpenSSL" />
+		<PackageReference Include="VpnHood.Core.Server.Access" />
+		<PackageReference Include="VpnHood.Core.Toolkit" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="all" />
 	</ItemGroup>
 
+	<!-- Files referenced by the package metadata in Directory.Build.props. -->
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+	</ItemGroup>
 
 </Project>

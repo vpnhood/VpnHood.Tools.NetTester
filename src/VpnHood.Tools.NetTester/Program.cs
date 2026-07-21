@@ -1,11 +1,11 @@
 ﻿using System.Net;
 using Microsoft.Extensions.Logging;
 using VpnHood.Core.Toolkit.Logging;
-using VpnHood.NetTester.Clients;
-using VpnHood.NetTester.Servers;
-using VpnHood.NetTester.Utils;
+using VpnHood.Tools.NetTester.Clients;
+using VpnHood.Tools.NetTester.Servers;
+using VpnHood.Tools.NetTester.Utils;
 
-namespace VpnHood.NetTester;
+namespace VpnHood.Tools.NetTester;
 
 internal class Program
 {
