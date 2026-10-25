@@ -13,7 +13,7 @@ A network performance testing tool that supports multiple protocols including TC
 
 ## Requirements
 
-- .NET 10.0 or later
+- .NET 11.0 or later
 
 ## Installation
 
